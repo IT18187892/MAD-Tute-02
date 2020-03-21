@@ -9,4 +9,5 @@
     <string name="hint1">123</string>
     <string name="hint2">123</string>
     <string name="btn_ok">OK</string>
+    <string name="answer">Answer</string>
 </resources>
