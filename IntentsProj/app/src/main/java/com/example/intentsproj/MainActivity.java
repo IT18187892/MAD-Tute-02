@@ -22,17 +22,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //create layout as template
         LayoutInflater layoutInflater = getLayoutInflater();
         View layout = layoutInflater.inflate(R.layout.customtoast,(ViewGroup)findViewById(R.id.custom_toast_layout));
 
         nextPage = (Button) findViewById(R.id.id_btn_calculator);
 
+        //implement toast
         Toast toast = new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL,0,0);
         toast.setView(layout);
         toast.show();
 
+        //when click on the button redirect to calculator
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
