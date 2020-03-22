@@ -26,6 +26,7 @@ public class SecondActivity extends AppCompatActivity {
     String num1;
     String num2;
 
+    //double variables to do calculations
     double val1,val2,total =0;
 
     CharSequence message = "";
@@ -46,12 +47,14 @@ public class SecondActivity extends AppCompatActivity {
 
         Intent receive = getIntent();
 
+        //get passed values to variables
         num1 = receive.getStringExtra("NUMBER1");
         num2 = receive.getStringExtra("NUMBER2");
 
         value1.setText(num1);
         value2.setText(num2);
 
+        //convert string variable to double
         val1 = Double.parseDouble(num1);
         val2 = Double.parseDouble(num2);
 
@@ -61,6 +64,7 @@ public class SecondActivity extends AppCompatActivity {
         final Toast toast = Toast.makeText(context,message,duration);
         toast.setGravity(Gravity.TOP,0,0);
 
+        //This execute when press Add button
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +79,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+        //This execute when press minus button
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,6 +93,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+        //This execute when press Multiply button
         multi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,6 +107,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+        //This execute when press Devide button
         devide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

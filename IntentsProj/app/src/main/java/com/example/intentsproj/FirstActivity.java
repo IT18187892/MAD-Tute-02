@@ -16,6 +16,7 @@ public class FirstActivity extends AppCompatActivity {
     EditText number2;
     Button btn_ok;
 
+    //strings to store input values
     String num1;
     String num2;
 
@@ -24,6 +25,7 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
+        //set objects id's to variables
         number1 = (EditText) findViewById(R.id.id_input1);
         number2 = (EditText) findViewById(R.id.id_input2);
         btn_ok = (Button) findViewById(R.id.id_btn_ok);
@@ -33,9 +35,11 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+                //set the values pass to the next activity
                 intent.putExtra("NUMBER1", number1.getText().toString());
                 intent.putExtra("NUMBER2", number2.getText().toString());
 
+                //implement toast message
                 Context context = getApplicationContext();
                 CharSequence message = "Numbers are saved successfully";
                 int duration = Toast.LENGTH_LONG;
